@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избор на Урок</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #ffffff; /* Set background color to white */
+            color: #333; /* Text color */
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(74, 144, 226, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Main Section */
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh; /* Center vertically */
+            padding: 20px;
+        }
+
+        .subject-button {
+            background-color: #4a90e2; /* Button color */
+            color: white; /* Text color */
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 200px; /* Fixed button width */
+            text-align: center;
+        }
+
+        .subject-button:hover {
+            background-color: #3a70b2; /* Darker button color on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer span {
+            font-size: 14px;
+        }
+
+        footer .beta-test {
+            font-size: 12px;
+            color: #ffcb05;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Избор на Урок
+</header>
+
+<!-- Main Section -->
+<section class="main">
+    <h1>Изберете Предмет</h1>
+    <a href="math.html" class="subject-button">Математика</a>
+    <a href="english.html" class="subject-button">Английски</a>
+    <a href="history.html" class="subject-button">История</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <span>&copy; 2024 CookieStocky. Всички права запазени.</span><br>
+    <span class="beta-test">Този сайт е в бета тест. Вашите отзиви са важни за нас!</span>
+</footer>
+
+</body>
+</html>
