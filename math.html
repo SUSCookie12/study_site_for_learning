@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Математика - Уроци</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Математика - Уроци</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="#lessons">Уроци</a>
+                    <ul>
+                        <li><a href="#lesson3">Рационален израз</a></li>
+                        <li><a href="#lesson4">Числена стойност на израз</a></li>
+                        <li><a href="#lesson5">Едночлен</a></li>
+                        <li><a href="#lesson6">Събиране и изваждане на едночлени</a></li>
+                        <li><a href="#lesson8">Умножение, степенуване и деление на едночлени</a></li>
+                        <li><a href="#lesson9">Многочлен</a></li>
+                        <li><a href="#lesson10">Събиране и изваждане на многочлени</a></li>
+                        <li><a href="#lesson11">Умножение на многочлен с едночлен</a></li>
+                        <li><a href="#lesson12">Умножение на многочлен с многочлен</a></li>
+                        <li><a href="#lesson14">Тъждествени изрази</a></li>
+                        <li><a href="#lesson15">Тъждествата (a+b)²</a></li>
+                        <li><a href="#lesson17">Тъждествата (a+b)³</a></li>
+                        <li><a href="#lesson18">Тъждеството (a+b)(a-b)</a></li>
+                        <li><a href="#lesson19">Формули за съкратено умножение</a></li>
+                        <li><a href="#lesson22">Разлагане на многочлени на множители</a></li>
+                        <li><a href="#lesson28">Тъждествено преобразуване на изрази</a></li>
+                        <li><a href="#lesson29">Обобщение на темата „Цели изрази“</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Урок 3 -->
+        <div id="lesson3" class="lesson">
+            <h2>Урок 3: Рационален израз</h2>
+            <p>Рационален израз е израз, който е представен като дроб с числител и знаменател, където числителят и знаменателят са полиноми. Например, <em>f(x) = (2x + 3) / (x - 1)</em> е рационален израз.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Намери стойността на <em>f(x)</em> за <em>x = 2</em>: <br>
+                <em>f(2) = (2*2 + 3) / (2 - 1) = 7 / 1 = 7</em></li>
+                <li>Определи домейна на <em>f(x)</em>: <br>
+                <em>Доменът е всички <em>x</em>, за които знаменателят не е нула: <em>x ≠ 1</em></em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 3')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(3)">Тест</button>
+        </div>
+
+        <!-- Урок 4 -->
+        <div id="lesson4" class="lesson">
+            <h2>Урок 4: Числена стойност на израз</h2>
+            <p>Числената стойност на израз се получава, когато заменим променливите с конкретни числа и извършим операциите. Например, числената стойност на <em>2x + 3</em> при <em>x = 5</em> е <em>2*5 + 3 = 10 + 3 = 13</em>.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Намери числената стойност на <em>x^2 + 4x + 4</em> при <em>x = 2</em>: <br>
+                <em>2^2 + 4*2 + 4 = 4 + 8 + 4 = 16</em></li>
+                <li>Определи числената стойност на <em>3a - 5</em> при <em>a = -1</em>: <br>
+                <em>3*(-1) - 5 = -3 - 5 = -8</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 4')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(4)">Тест</button>
+        </div>
+
+        <!-- Урок 5 -->
+        <div id="lesson5" class="lesson">
+            <h2>Урок 5: Едночлен</h2>
+            <p>Едночлен е израз, който съдържа само едно число, променлива или произведение от тях. Например, <em>3x^2</em>, <em>-7</em>, <em>xy</em> са примери за едночлени.</p>
+            <h3>Нормален вид на едночлен</h3>
+            <p>Едночлените се представят в нормален вид с положителен коефициент и степен на променливата. Например, <em>-4x^3</em> трябва да бъде представен като <em>-4x^3</em>.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Запиши следните едночлени в нормален вид:
+                    <ul>
+                        <li><em>-5y^2 = -5y^2</em></li>
+                        <li><em>0.5x = 0.5x</em></li>
+                    </ul>
+                </li>
+                <li>Определи степента на едночлена <em>6x^4y^2</em>: <br>
+                <em>Степента е 4 + 2 = 6</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 5')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(5)">Тест</button>
+        </div>
+
+        <!-- Урок 6 -->
+        <div id="lesson6" class="lesson">
+            <h2>Урок 6: Събиране и изваждане на едночлени</h2>
+            <p>Събирането и изваждането на едночлени се извършва само между подобни едночлени. Подобни едночлени имат същата променлива с еднаква степен.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Събери <em>3x^2 + 5x^2</em>: <br>
+                <em>3x^2 + 5x^2 = 8x^2</em></li>
+                <li>Извади <em>7y - 2y</em>: <br>
+                <em>7y - 2y = 5y</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 6')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(6)">Тест</button>
+        </div>
+
+        <!-- Урок 8 -->
+        <div id="lesson8" class="lesson">
+            <h2>Урок 8: Умножение, степенуване и деление на едночлени</h2>
+            <p>Умножението и делението на едночлени се извършва чрез умножаване или деление на коефициентите и събиране или изваждане на степените на променливите.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Умножи <em>2x^3 * 4x^2</em>: <br>
+                <em>2 * 4 * x^{3+2} = 8x^5</em></li>
+                <li>Изчисли <em>(-3x^4) / (x^2)</em>: <br>
+                <em>-3x^{4-2} = -3x^2</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 8')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(8)">Тест</button>
+        </div>
+
+        <!-- Урок 9 -->
+        <div id="lesson9" class="lesson">
+            <h2>Урок 9: Многочлен</h2>
+            <p>Многочлен е израз, който се състои от два или повече едночлена, свързани чрез събиране или изваждане. Например, <em>3x^2 + 4x - 5</em> е многочлен.</p>
+            <h3>Нормален вид на многочлен</h3>
+            <p>Многочлените трябва да се записват в нормален вид, като се подреждат според намаляващата степен на променливата.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Запиши многочлена <em>2x^2 + 5 - 3x</em> в нормален вид: <br>
+                <em>2x^2 - 3x + 5</em></li>
+                <li>Намери броя на едночлените в многочлена <em>4xy + 3x^2y - 7y^3</em>: <br>
+                <em>Броят е 3</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 9')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(9)">Тест</button>
+        </div>
+
+        <!-- Урок 10 -->
+        <div id="lesson10" class="lesson">
+            <h2>Урок 10: Събиране и изваждане на многочлени</h2>
+            <p>Събирането и изваждането на многочлени става чрез комбиниране на подобни едночлени. Важно е да се обърне внимание на знаците на многочлените.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Събери <em>(3x^2 + 2x) + (4x^2 - 5x)</em>: <br>
+                <em>(3x^2 + 4x^2) + (2x - 5x) = 7x^2 - 3x</em></li>
+                <li>Извади <em>(5y^3 + 2y) - (3y^3 - y)</em>: <br>
+                <em>(5y^3 - 3y^3) + (2y + y) = 2y^3 + 3y</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 10')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(10)">Тест</button>
+        </div>
+
+        <!-- Урок 11 -->
+        <div id="lesson11" class="lesson">
+            <h2>Урок 11: Умножение на многочлен с едночлен</h2>
+            <p>Умножението на многочлен с едночлен се извършва, като умножим всеки едночлен от многочлена с едночлена. Резултатът е нов многочлен.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Умножи <em>2x(3x^2 + 4x - 1)</em>: <br>
+                <em>2x * 3x^2 + 2x * 4x - 2x = 6x^3 + 8x^2 - 2x</em></li>
+                <li>Изчисли <em>(-5)(x^3 - 2x^2 + x)</em>: <br>
+                <em>-5x^3 + 10x^2 - 5x</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 11')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(11)">Тест</button>
+        </div>
+
+        <!-- Урок 12 -->
+        <div id="lesson12" class="lesson">
+            <h2>Урок 12: Умножение на многочлен с многочлен</h2>
+            <p>Умножението на многочлени включва използването на разпределителния закон. Всеки член от първия многочлен се умножава с всеки член от втория.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Умножи <em>(x + 2)(x + 3)</em>: <br>
+                <em>x^2 + 3x + 2x + 6 = x^2 + 5x + 6</em></li>
+                <li>Изчисли <em>(2x - 1)(x^2 + 3x + 4)</em>: <br>
+                <em>2x^3 + 6x^2 + 8x - x^2 - 3x - 4 = 2x^3 + 5x^2 + 5x - 4</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 12')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(12)">Тест</button>
+        </div>
+
+        <!-- Урок 14 -->
+        <div id="lesson14" class="lesson">
+            <h2>Урок 14: Тъждествени изрази</h2>
+            <p>Тъждествени изрази са равенства, които са верни за всички стойности на променливите. Например, <em>(a + b)² = a² + 2ab + b²</em>.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Проверете дали <em>(x + 3)² = x² + 6x + 9</em> е тъждество: <br>
+                <em>Тъй като (x + 3)(x + 3) = x² + 6x + 9, изразът е верен.</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 14')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(14)">Тест</button>
+        </div>
+
+        <!-- Урок 15 -->
+        <div id="lesson15" class="lesson">
+            <h2>Урок 15: Тъждествата (a+b)² = a² + 2ab + b²</h2>
+            <p>Тъждеството (a + b)² = a² + 2ab + b² е основно тъждество, което описва квадрата на сумата на две числа.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Проверете тъждеството за <em>a = 2</em> и <em>b = 3</em>: <br>
+                <em>(2 + 3)² = 5² = 25</em> и <em>2² + 2*2*3 + 3² = 4 + 12 + 9 = 25</em>, следователно тъждеството е верно.</li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 15')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(15)">Тест</button>
+        </div>
+
+        <!-- Урок 17 -->
+        <div id="lesson17" class="lesson">
+            <h2>Урок 17: Тъждествата (a+b)³ = a³ + 3a²b + 3ab² + b³</h2>
+            <p>Тъждеството (a + b)³ = a³ + 3a²b + 3ab² + b³ разширява куба на сумата на две променливи.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Проверете тъждеството за <em>a = 1</em> и <em>b = 2</em>: <br>
+                <em>(1 + 2)³ = 3³ = 27</em> и <em>1³ + 3*1²*2 + 3*1*2² + 2³ = 1 + 6 + 12 + 8 = 27</em>, следователно тъждеството е верно.</li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 17')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(17)">Тест</button>
+        </div>
+
+        <!-- Урок 18 -->
+        <div id="lesson18" class="lesson">
+            <h2>Урок 18: Тъждеството (a+b)(a-b) = a²-b²</h2>
+            <p>Тъждеството (a + b)(a - b) = a² - b² представлява разликата на квадратите на две променливи.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Проверете тъждеството за <em>a = 4</em> и <em>b = 2</em>: <br>
+                <em>(4 + 2)(4 - 2) = 6 * 2 = 12</em> и <em>4² - 2² = 16 - 4 = 12</em>, следователно тъждеството е верно.</li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 18')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(18)">Тест</button>
+        </div>
+
+        <!-- Урок 19 -->
+        <div id="lesson19" class="lesson">
+            <h2>Урок 19: Формули за съкратено умножение</h2>
+            <p>Формулите за съкратено умножение са полезни за бързо опростяване на изрази. Примери за формули включват:</p>
+            <ul>
+                <li><em>(a + b)² = a² + 2ab + b²</em></li>
+                <li><em>(a - b)² = a² - 2ab + b²</em></li>
+                <li><em>(a + b)(a - b) = a² - b²</em></li>
+            </ul>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Използвай формулата за <em>(x + 3)²</em>: <br>
+                <em>x² + 6x + 9</em></li>
+                <li>Изчисли <em>(2x - 5)(2x + 5)</em>: <br>
+                <em>4x² - 25</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 19')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(19)">Тест</button>
+        </div>
+
+        <!-- Урок 20 -->
+        <div id="lesson20" class="lesson">
+            <h2>Урок 20: Тъждествата (a+b)(a²+ab+b²)=a³+b³</h2>
+            <p>Тъждеството (a + b)(a² + ab + b²) = a³ + b³ представлява разширението на куба на сумата на две променливи.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Проверете тъждеството за <em>a = 1</em> и <em>b = 2</em>: <br>
+                <em>(1 + 2)(1² + 1*2 + 2²) = 3(1 + 2 + 4) = 3 * 7 = 21</em> и <em>1³ + 2³ = 1 + 8 = 9</em>, следователно тъждеството не е вярно за този пример.</li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 20')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(20)">Тест</button>
+        </div>
+
+        <!-- Урок 22 -->
+        <div id="lesson22" class="lesson">
+            <h2>Урок 22: Разлагане на многочлени на множители</h2>
+            <p>Разлагането на многочлени на множители е процес на разделяне на многочлен на прости множители. Важно е да се изнесе общият множител и да се прилагат формули за съкратено умножение.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Разложи <em>6x^2 + 9x</em>: <br>
+                <em>3x(2x + 3)</em></li>
+                <li>Разложи <em>x^2 - 4</em>: <br>
+                <em>(x + 2)(x - 2)</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 22')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(22)">Тест</button>
+        </div>
+
+        <!-- Урок 23 -->
+        <div id="lesson23" class="lesson">
+            <h2>Урок 23: Разлагане чрез групиране</h2>
+            <p>Разлагането чрез групиране е метод за разлагане на многочлени, който включва групиране на членове и изнасяне на общи множители.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Разложи <em>3x^2 + 6x + 2x + 4</em>: <br>
+                <em>3x(x + 2) + 2(x + 2) = (3x + 2)(x + 2)</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 23')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(23)">Тест</button>
+        </div>
+
+        <!-- Урок 24 -->
+        <div id="lesson24" class="lesson">
+            <h2>Урок 24: Разлагане чрез комбинирано използване на различни методи</h2>
+            <p>Разлагането може да изисква комбинирано използване на различни методи, като изнасяне на общ множител и разлагане чрез групиране.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Разложи <em>x^3 + 3x^2 + 3x + 1</em>: <br>
+                <em>(x^3 + 3x^2) + (3x + 1) = x^2(x + 3) + 1(3 + 1) = (x^2 + 1)(x + 1)</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 24')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(24)">Тест</button>
+        </div>
+
+        <!-- Урок 28 -->
+        <div id="lesson28" class="lesson">
+            <h2>Урок 28: Тъждествено преобразуване на изрази</h2>
+            <p>Тъждественото преобразуване на изрази включва прилагане на тъждествени правила за опростяване на сложни изрази.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Опитай да опростиш <em>(x² + 2x + 1)²</em>: <br>
+                <em>x^4 + 4x^3 + 6x^2 + 4x + 1</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 28')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(28)">Тест</button>
+        </div>
+
+        <!-- Урок 29 -->
+        <div id="lesson29" class="lesson">
+            <h2>Урок 29: Решаване на равенства</h2>
+            <p>Решаването на равенства включва намиране на стойността на променливата, която прави равенството вярно.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Реши равенството <em>2x + 3 = 11</em>: <br>
+                <em>2x = 8 -> x = 4</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 29')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(29)">Тест</button>
+        </div>
+
+        <!-- Урок 30 -->
+        <div id="lesson30" class="lesson">
+            <h2>Урок 30: Решаване на неравенства</h2>
+            <p>Решаването на неравенства включва намиране на стойността на променливата, която прави неравенството вярно.</p>
+            <h3>Примери за решаване на задачи:</h3>
+            <ol>
+                <li>Реши неравенството <em>3x - 4 > 2</em>: <br>
+                <em>3x > 6 -> x > 2</em></li>
+            </ol>
+            <button class="complete-lesson" onclick="completeLesson('Урок 30')">Завърши урока</button>
+            <button class="test-btn" onclick="startTest(30)">Тест</button>
+        </div>
+    </div>
+</div>
+
+<!-- Секция за резултатите -->
+<div id="results" class="results">
+    <h2>Вашите резултати</h2>
+    <div id="score"></div>
+    <button onclick="restartQuiz()">Начало</button>
+</div>
+
+<script>
+    let currentLessonIndex = 0;
+    let score = 0;
+
+    function completeLesson(lesson) {
+        // Code to mark the lesson as complete
+        alert(lesson + " е завършен!");
+    }
+
+    function startTest(lessonIndex) {
+        currentLessonIndex = lessonIndex;
+        score = 0; // Reset score for new test
+        // Load test questions based on lesson index (pseudo-code)
+        loadTestQuestions(lessonIndex);
+    }
+
+    function loadTestQuestions(lessonIndex) {
+        // Pseudo-code to fetch and display test questions
+        // You would replace this with actual logic to display test questions
+        document.getElementById('results').style.display = 'none'; // Hide results section
+        alert('Тест за Урок ' + lessonIndex + ' е стартиран!');
+    }
+
+    function submitTest() {
+        // Code to submit the test and calculate score
+        // You would replace this with actual logic to calculate and display results
+        document.getElementById('score').innerText = "Резултат: " + score + " от " + totalQuestions;
+        document.getElementById('results').style.display = 'block'; // Show results section
+    }
+
+    function restartQuiz() {
+        document.getElementById('results').style.display = 'none'; // Hide results section
+        currentLessonIndex = 0; // Reset to the first lesson
+        // You may want to reset lessons' completion status here
+    }
+</script>
+</body>
+</html>

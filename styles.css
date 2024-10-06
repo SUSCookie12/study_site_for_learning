@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background: #444;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+.lesson, .test {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.complete-lesson, .test-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    color: #fff;
+    background: #007bff;
+    padding: 10px;
+    text-decoration: none;
+}
