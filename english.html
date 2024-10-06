@@ -3,76 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Английски</title>
+    <title>Учи английски с CookieLearn platform</title>
     <style>
         body {
-            background-color: #e6f7ff;
-            font-family: 'Segoe UI', sans-serif;
-        }
-        h1, h2 {
-            color: #00008b;
-        }
-        .container {
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .practice, .vocabulary, .writing {
-            margin: 20px 0;
-        }
-        .practice ul, .vocabulary ul, .writing ul {
-            list-style: none;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
             padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(270deg, #ffffff, #a1c4fd, #c2e9fb, #a1c4fd, #e0c3fc);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: white;
+            opacity: 0; /* Start with invisible body for transition */
+            transition: opacity 0.5s ease; /* Transition effect for fade in/out */
         }
-        .practice li, .vocabulary li, .writing li {
-            background-color: #f0f8ff;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 10px;
-            transition: background-color 0.3s;
-        }
-        .practice li:hover, .vocabulary li:hover, .writing li:hover {
-            background-color: #b0e0e6;
-        }
-        a {
-            display: block;
-            margin-top: 20px;
+
+        /* Header */
+        header {
+            background-color: rgba(74, 144, 226, 0.9);
+            padding: 20px;
             text-align: center;
-            text-decoration: none;
-            color: #0066cc;
+            color: white;
+            font-size: 24px;
             font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: white;
+            position: relative;
+            margin-top: 20px;
+            z-index: 1; /* To ensure footer is above the background */
+        }
+
+        footer span {
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Scrollbar Customization */
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a90e2;
+            border-radius: 5px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #f0f8ff;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Уроци по Английски</h1>
-        
-        <!-- Превъзходна степен -->
-        <div class="practice">
-            <h2>Превъзходна степен</h2>
-            <ul>
-                <li>Good → The Best</li>
-            </ul>
-        </div>
+<body onload="fadeIn()">
 
-        <!-- Времето - Weather -->
-        <div class="vocabulary">
-            <h2>Времето - Weather</h2>
-            <ul>
-                <li>Sun → Слънце</li>
-                <li>Rain → Дъжд</li>
-                <li>Cloudy → Облачно</li>
-            </ul>
-        </div>
+<header>
+    Учи английски с CookieLearn platform
+</header>
 
-        <!-- Писмено упражнение -->
-        <div class="writing">
-            <h2>Ако можех да отида някъде...</h2>
-            <p>Ако можех да отида някъде, бих избрал Япония. Бих искал да видя красивите места и да опитам храната там...</p>
-        </div>
+<div class="content">
+    <h1>Добре дошли в уроците по английски!</h1>
+    <p>Тук можете да намерите полезни уроци и упражнения, за да подобрите английския си език.</p>
+    <h2>Темите включват:</h2>
+    <ul>
+        <li>Граматика</li>
+        <li>Лексика</li>
+        <li>Четене</li>
+        <li>Писане</li>
+    </ul>
+    <p>Започнете с уроците и се насладете на учението!</p>
+</div>
 
-        <a href="index.html">Назад към началната страница</a>
-    </div>
+<footer>
+    &copy; 2024 CookieStocky. Всички права запазени.
+    <br>
+    <span>Този сайт все още е в тестов период, така че информацията може да не е напълно точна. Моля, тествайте сайта, а не информацията.</span>
+</footer>
+
+<script>
+    function fadeIn() {
+        document.body.style.opacity = "1"; // Fade in effect
+    }
+</script>
+
 </body>
 </html>
