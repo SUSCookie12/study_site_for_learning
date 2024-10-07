@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Commands</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #282c34;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .window {
+            background-color: #3c4043;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 800px;
+            overflow: hidden;
+        }
+        .title-bar {
+            background-color: #4d4f50;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .search-bar {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+            width: calc(100% - 40px);
+            background-color: #2c2e30;
+            color: white;
+        }
+        .description {
+            padding: 15px;
+            background-color: #3c4043;
+        }
+        .command {
+            padding: 10px 15px;
+            background-color: #2c2e30;
+            margin: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .command:hover {
+            background-color: #424548;
+        }
+        .command-title {
+            font-weight: bold;
+            color: #00ff00; /* Green color for command title */
+        }
+        .command-description {
+            color: #ccc; /* Light grey for command description */
+        }
+        .copy-button {
+            background-color: #4d4f50;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .copy-button:hover {
+            background-color: #5a5c5d;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title">Minecraft Commands</div>
+            <div class="close-button">✖</div>
+        </div>
+        <input type="text" id="search" class="search-bar" placeholder="Search commands..." oninput="filterCommands()">
+        <div class="description">
+            <p>Here are some useful Minecraft commands you can use:</p>
+        </div>
+        <div id="command-list">
+            <div class="command">
+                <div>
+                    <div class="command-title">/gamemode creative</div>
+                    <div class="command-description">Switches your gamemode to Creative.</div>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('/gamemode creative')">Copy</button>
+            </div>
+            <div class="command">
+                <div>
+                    <div class="command-title">/tp [player] [target]</div>
+                    <div class="command-description">Teleports a player to another player or location.</div>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('/tp [player] [target]')">Copy</button>
+            </div>
+            <div class="command">
+                <div>
+                    <div class="command-title">/give [player] [item] [amount]</div>
+                    <div class="command-description">Gives an item to a player.</div>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('/give [player] [item] [amount]')">Copy</button>
+            </div>
+            <div class="command">
+                <div>
+                    <div class="command-title">/summon [entity]</div>
+                    <div class="command-description">Summons an entity to your location.</div>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('/summon [entity]')">Copy</button>
+            </div>
+            <div class="command">
+                <div>
+                    <div class="command-title">/time set day</div>
+                    <div class="command-description">Sets the time to day.</div>
+                </div>
+                <button class="copy-button" onclick="copyToClipboard('/time set day')">Copy</button>
+            </div>
+            <!-- Add more commands here -->
+        </div>
+    </div>
+
+    <script>
+        function filterCommands() {
+            const searchInput = document.getElementById('search').value.toLowerCase();
+            const commands = document.querySelectorAll('.command');
+            commands.forEach(command => {
+                const title = command.querySelector('.command-title').innerText.toLowerCase();
+                const description = command.querySelector('.command-description').innerText.toLowerCase();
+                if (title.includes(searchInput) || description.includes(searchInput)) {
+                    command.style.display = '';
+                } else {
+                    command.style.display = 'none';
+                }
+            });
+        }
+
+        function copyToClipboard(command) {
+            navigator.clipboard.writeText(command).then(() => {
+                alert('Command copied to clipboard: ' + command);
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
