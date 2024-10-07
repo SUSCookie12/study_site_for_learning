@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Химия</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #f0f8ff, #b0e0e6);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1 {
+            text-align: center;
+            color: #2e8b57;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin: 20px 0;
+            position: relative;
+            padding: 15px;
+            border: 1px solid #2e8b57;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            padding-left: 20px; /* Indentation for the next level */
+        }
+        .sub-content {
+            padding-left: 40px; /* Additional indentation for sub-levels */
+        }
+        .sub-sub-content {
+            padding-left: 60px; /* Extra indentation for (1), (2) items */
+        }
+        .more-in {
+            padding-left: 80px; /* Increased indentation for Прости and Сложни */
+        }
+        .line {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 2px;
+            height: 20px;
+            background-color: #2e8b57;
+            margin-left: -1px;
+            z-index: -1;
+        }
+        .line::before {
+            content: '';
+            position: absolute;
+            left: -20px; /* Adjust for connection point */
+            top: -20px; /* Move up to connect with parent */
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2e8b57;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            color: #fff;
+            background-color: #2e8b57;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+        .toggle-btn:hover {
+            background-color: #3cb371;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Химия</h1>
+        
+        <div class="section">
+            <h2 class="toggle-btn" onclick="toggleContent('substances')">1) Вещества</h2>
+            <div class="line"></div>
+            <div class="content" id="substances">
+                <h3>a) Градивни частици</h3>
+                <div class="line"></div>
+                <h4 class="sub-content">i) Атоми</h4>
+                <p class="sub-sub-content">(1) Ядро</p>
+                <p class="sub-sub-content">(2) Електронна обвивка</p>
+                <h4 class="sub-content">ii) Йони</h4>
+                <p class="sub-sub-content">(1) Положителни</p>
+                <p class="sub-sub-content">(2) Отрицателни</p>
+                <h4 class="sub-content">iii) Молекули</h4>
+                
+                <h3 class="sub-content">b) Видове</h3>
+                <div class="line"></div>
+                <h4 class="more-in">i) Прости</h4>
+                <h4 class="more-in">ii) Сложни</h4>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="toggle-btn" onclick="toggleContent('reactions')">2) Химични реакции</h2>
+            <div class="line"></div>
+            <div class="content" id="reactions">
+                <h3>a) Състав</h3>
+                <div class="line"></div>
+                <h4 class="sub-content">i) Продукти на реакцията</h4>
+                <h4 class="sub-content">ii) Изходни вещества</h4>
+                <h3>b) Условия</h3>
+                <h3>c) Признаци</h3>
+                <h3>d) Видове</h3>
+                <h4 class="sub-content">i) Хим. Разлагане</h4>
+                <h4 class="sub-content">ii) Хим. Съединяване</h4>
+                <h4 class="sub-content">iii) Хим. Разлагане</h4>
+                <h4 class="sub-content">iv) Горене</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        // Initializing all content to be hidden
+        document.querySelectorAll('.content').forEach(item => {
+            item.style.display = "none";
+        });
+    </script>
+</body>
+</html>
