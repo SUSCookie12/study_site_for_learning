@@ -1,95 +1,304 @@
-<!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>История | CookieLearn platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(270deg, #ffffff, #a1c4fd, #c2e9fb, #a1c4fd, #e0c3fc);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #333;
+            opacity: 0; /* Start with invisible body for transition */
+            transition: opacity 0.5s ease; /* Transition effect for fade in/out */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(74, 144, 226, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+            text-align: left;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card ul li {
+            list-style-type: disc;
+        }
+
+        .card.banana {
+            background-color: #FFE135; /* Banana color */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: white;
+            position: relative;
+            z-index: 1; /* To ensure footer is above the background */
+        }
+
+        footer span {
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Scrollbar Customization */
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a90e2;
+            border-radius: 5px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin: 20px 0;
+            position: relative;
+            padding: 15px;
+            border: 1px solid #2e8b57;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            padding-left: 20px; /* Indentation for the next level */
+        }
+        .sub-content {
+            padding-left: 40px; /* Additional indentation for sub-levels */
+        }
+        .sub-sub-content {
+            padding-left: 60px; /* Extra indentation for (1), (2) items */
+        }
+        .more-in {
+            padding-left: 80px; /* Increased indentation for Прости and Сложни */
+        }
+        .line {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 2px;
+            height: 20px;
+            background-color: #2e8b57;
+            margin-left: -1px;
+            z-index: -1;
+        }
+        .line::before {
+            content: '';
+            position: absolute;
+            left: -20px; /* Adjust for connection point */
+            top: -20px; /* Move up to connect with parent */
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2e8b57;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            color: #fff;
+            background-color: #2e8b57;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+        .toggle-btn:hover {
+            background-color: #3cb371;
+        }
+
+        /* Navigation Bar */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Уроци по История</h1>
-        
-        <!-- Линия на времето -->
-        <div class="timeline">
-            <h2>Линия на времето</h2>
-            <ul>
-                <li>Битката при Клокотница - 1230 г. (Иван Асен II)</li>
-                <li>Битката при Върбишкия проход - 811 г. (Крум)</li>
-                <li>Битката при Одрин - 1205 г. (Калоян)</li>
-                <li>Тервел побеждава арабите - 718 г.</li>
-                <li>Битката при р. Ахелой - 917 г. (Симеон)</li>
-                <li>Падането на Видинското царство - 1396 г.</li>
-                <li>Падане на Търновското Царство - 1393 г.</li>
-            </ul>
-        </div>
+<body onload="fadeIn()">
 
-        <!-- Владетели на България -->
-        <div class="rulers">
-            <h2>Владетели на България</h2>
-            <ol>
-                <li>Кубрат</li>
-                <li>Аспарух</li>
-                <li>Тервел</li>
-                <li>Крум</li>
-                <li>Омуртаг</li>
-                <li>Маламир</li>
-                <li>Пресиян</li>
-                <li>Борис</li>
-                <li>Владимир - Расате</li>
-                <li>Симеон</li>
-                <li>Петър</li>
-                <li>Самуил</li>
-                <li>Гаврил Радомир</li>
-                <li>Иван Владислав</li>
-                <li>Асен</li>
-                <li>Петър</li>
-                <li>Калоян</li>
-                <li>Борил</li>
-                <li>Иван Асен II</li>
-                <li>Коломан</li>
-                <li>Константин Тих Асен</li>
-                <li>Ивайло</li>
-                <li>Иван Александър</li>
-            </ol>
-        </div>
+<header>
+    История | CookieLearn platform
+    <nav>
+        <a href="index.html">Back to Home</a>
+        <br>
+        <a href="lessons.html">Избери друг предмет</a>
+    </nav>
+</header>
 
-        <!-- Понятия -->
-        <div class="terms">
-            <h2>Понятия</h2>
-            <ul>
-                <li>Толерантност - уважение, зачитане</li>
-                <li>Дискриминация - неуважение, незачитане</li>
-                <li>Дипломация - решаване на конфликти по мирен път</li>
-                <li>Васалитет - да си подчинен</li>
-                <li>Библия - свещена книга на християните</li>
-                <li>Коран - свещена книга на мюсюлманите</li>
-                <li>Халиф - духовен и държавен глава</li>
-                <li>Патриарх - духовен водач на православните християни</li>
-                <li>Везир - съветник на султана</li>
-                <li>Султан - държавен глава на Османската империя</li>
-                <li>Чаршия - главната улица</li>
-                <li>Къдия - съдия</li>
-                <li>Мегдан - площад, център</li>
-            </ul>
-        </div>
-
-        <!-- Упражнения -->
-        <div class="exercises">
-            <h2>Упражнения</h2>
-            <h3>1. Попълнете празните места:</h3>
-            <p>Битката при _________ - 1230 г. (Иван Асен II)</p>
-            <input type="text" class="answer" id="exercise1" placeholder="Вашият отговор">
-            
-            <h3>2. Кой е бил __________?</h3>
-            <input type="text" class="answer" id="exercise2" placeholder="Вашият отговор">
-
-            <button class="check-btn" onclick="checkAnswers()">Провери</button>
-            <p id="feedback"></p>
-        </div>
-
-        <a href="index.html" class="back-btn">Назад към началната страница</a>
+<div class="container">
+    <h1>Уроци по История</h1>
+    
+    <!-- Линия на времето -->
+    <div class="timeline">
+        <h2>Линия на времето</h2>
+        <ul>
+            <li>Битката при Клокотница - 1230 г. (Иван Асен II)</li>
+            <li>Битката при Върбишкия проход - 811 г. (Крум)</li>
+            <li>Битката при Одрин - 1205 г. (Калоян)</li>
+            <li>Тервел побеждава арабите - 718 г.</li>
+            <li>Битката при р. Ахелой - 917 г. (Симеон)</li>
+            <li>Падането на Видинското царство - 1396 г.</li>
+            <li>Падане на Търновското Царство - 1393 г.</li>
+        </ul>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Владетели на България -->
+    <div class="rulers">
+        <h2>Владетели на България</h2>
+        <ol>
+            <li>Кубрат</li>
+            <li>Аспарух</li>
+            <li>Тервел</li>
+            <li>Крум</li>
+            <li>Омуртаг</li>
+            <li>Маламир</li>
+            <li>Пресиян</li>
+            <li>Борис</li>
+            <li>Владимир - Расате</li>
+            <li>Симеон</li>
+            <li>Петър</li>
+            <li>Самуил</li>
+            <li>Гаврил Радомир</li>
+            <li>Иван Владислав</li>
+            <li>Асен</li>
+            <li>Петър</li>
+            <li>Калоян</li>
+            <li>Борил</li>
+            <li>Иван Асен II</li>
+            <li>Коломан</li>
+            <li>Константин Тих Асен</li>
+            <li>Ивайло</li>
+            <li>Иван Александър</li>
+        </ol>
+    </div>
+
+    <!-- Понятия -->
+    <div class="terms">
+        <h2>Понятия</h2>
+        <ul>
+            <li>Толерантност - уважение, зачитане</li>
+            <li>Дискриминация - неуважение, незачитане</li>
+            <li>Дипломация - решаване на конфликти по мирен път</li>
+            <li>Васалитет - да си подчинен</li>
+            <li>Библия - свещена книга на християните</li>
+            <li>Коран - свещена книга на мюсюлманите</li>
+            <li>Халиф - духовен и държавен глава</li>
+            <li>Патриарх - духовен водач на православните християни</li>
+            <li>Везир - съветник на султана</li>
+            <li>Султан - държавен глава на Османската империя</li>
+            <li>Чаршия - главната улица</li>
+            <li>Къдия - съдия</li>
+            <li>Мегдан - площад, център</li>
+        </ul>
+    </div>
+
+<footer>
+    © 2024 CookieStocky. Всички права запазени.
+    <br>
+    <span>Този сайт все още е в тестов период, така че информацията може да не е напълно точна. Моля, тествайте сайта, а не информацията.</span>
+</footer>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+
+    // Initializing all content to be hidden
+    document.querySelectorAll('.content').forEach(item => {
+        item.style.display = "none";
+    });
+    
+    function fadeIn() {
+        document.body.style.opacity = "1"; // Fade in effect
+    }
+</script>
+
 </body>
 </html>

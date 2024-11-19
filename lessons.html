@@ -84,19 +84,70 @@
             font-size: 12px;
             color: #ffcb05;
         }
+
+        /* Navigation Bar */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+         /* Splash Screen */
+        .splash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* Splash background color */
+            z-index: 9999; /* Place it above everything */
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease; /* Transition for fade effect */
+        }
+
+        /* Scrollbar Customization */
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a90e2;
+            border-radius: 5px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #f0f8ff;
+        }
     </style>
 </head>
 <body>
+<body onload="fadeIn()"></body>
+
+    <!-- Splash Screen -->
+<div class="splash" id="splash">
+    <div>Loading...</div>
+</div>
 
 <header>
     Избор на Урок
+    <nav>
+        <a href="index.html">Back to Home</a>
+    </nav>
 </header>
 
 <!-- Main Section -->
 <section class="main">
-    <h1>Try studying with AI</h1>
-    <a href="AI.html" class="subject-button">CookieAI-Study.1</a>
-
     <h1>Изберете Предмет</h1>
     <a href="math.html" class="subject-button">Математика</a>
     <a href="english.html" class="subject-button">Английски</a>
@@ -105,12 +156,40 @@
     <a href="bg.html" class="subject-button">Български език и литература</a>
     <a href="mine.html" class="subject-button">Minecraft Commands</a>
 </section>
+<div class="col-12 col-md-10 align-right">
+    <img class="d-none d-md-inline-block" src="./assets/scene-3.svg" alt="Mobile App Mockup" style="max-width: 35%; height: auto;">
+</div>
+
+
+<style>
+    .align-right {
+        text-align: right; /* Aligns text and inline elements to the right */
+    }
+</style>
 
 <!-- Footer -->
 <footer>
     <span>&copy; 2024 CookieStocky. Всички права запазени.</span><br>
     <span class="beta-test">Този сайт е в бета тест. Вашите отзиви са важни за нас!</span>
 </footer>
+
+<script>
+    function fadeIn() {
+        document.body.style.opacity = "1"; // Fade in effect
+    }
+
+    function splashScreen() {
+        const splash = document.getElementById('splash');
+        splash.style.display = 'flex'; // Show splash screen
+        setTimeout(() => {
+            splash.style.opacity = '0'; // Fade out the splash
+        }, 100); // Short delay to show splash before fading out
+
+        setTimeout(() => {
+            window.location.href = "lessons.html"; // Redirect after fade out
+        }, 500); // Match the timeout with the transition duration
+    }
+</script>
 
 </body>
 </html>

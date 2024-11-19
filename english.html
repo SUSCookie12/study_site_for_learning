@@ -73,12 +73,33 @@
         body::-webkit-scrollbar-track {
             background-color: #f0f8ff;
         }
+
+        /* Navigation Bar */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body onload="fadeIn()">
 
 <header>
     Учи английски с CookieLearn platform
+    <nav>
+        <a href="index.html">Back to Home</a>
+        <br>
+        <a href="lessons.html">Избери друг предмет</a>
+    </nav>
 </header>
 
 <div class="content">
@@ -93,12 +114,6 @@
     </ul>
     <p>Започнете с уроците и се насладете на учението!</p>
 </div>
-
-<footer>
-    &copy; 2024 CookieStocky. Всички права запазени.
-    <br>
-    <span>Този сайт все още е в тестов период, така че информацията може да не е напълно точна. Моля, тествайте сайта, а не информацията.</span>
-</footer>
 
 <script>
     function fadeIn() {

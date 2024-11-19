@@ -1,0 +1,280 @@
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Градивни частици на вещества | CookieLearn platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(270deg, #ffffff, #a1c4fd, #c2e9fb, #a1c4fd, #e0c3fc);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            color: #333;
+            opacity: 0; /* Start with invisible body for transition */
+            transition: opacity 0.5s ease; /* Transition effect for fade in/out */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(74, 144, 226, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #333;
+            text-align: left;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card ul li {
+            list-style-type: disc;
+        }
+
+        .card.banana {
+            background-color: #FFE135; /* Banana color */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            color: white;
+            position: relative;
+            z-index: 1; /* To ensure footer is above the background */
+        }
+
+        footer span {
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Scrollbar Customization */
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #4a90e2;
+            border-radius: 5px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: #f0f8ff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin: 20px 0;
+            position: relative;
+            padding: 15px;
+            border: 1px solid #2e8b57;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+            padding-left: 20px; /* Indentation for the next level */
+        }
+        .sub-content {
+            padding-left: 40px; /* Additional indentation for sub-levels */
+        }
+        .sub-sub-content {
+            padding-left: 60px; /* Extra indentation for (1), (2) items */
+        }
+        .more-in {
+            padding-left: 80px; /* Increased indentation for Прости and Сложни */
+        }
+        .line {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 2px;
+            height: 20px;
+            background-color: #2e8b57;
+            margin-left: -1px;
+            z-index: -1;
+        }
+        .line::before {
+            content: '';
+            position: absolute;
+            left: -20px; /* Adjust for connection point */
+            top: -20px; /* Move up to connect with parent */
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2e8b57;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            color: #fff;
+            background-color: #2e8b57;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+        .toggle-btn:hover {
+            background-color: #3cb371;
+        }
+
+        /* Navigation Bar */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body onload="fadeIn()">
+
+<header>
+    Градивни частици на вещества | CookieLearn platform
+    <nav>
+        <a href="index.html">Back to Home</a>
+        <br>
+        <a href="him.html">Избери друг урок</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Градивни частици на вещества</h1>
+    
+    <div class="section">
+        <h2 class="toggle-btn" onclick="toggleContent('substances')">1) Вещества</h2>
+        <div class="line"></div>
+        <div class="content" id="substances">
+            <h3>a) Градивни частици</h3>
+            <div class="line"></div>
+            <h4 class="sub-content">i) Атоми</h4>
+            <p class="sub-sub-content">(1) Ядро</p>
+            <p class="sub-sub-content">(2) Електронна обвивка</p>
+            <h4 class="sub-content">ii) Йони</h4>
+            <p class="sub-sub-content">(1) Положителни</p>
+            <p class="sub-sub-content">(2) Отрицателни</p>
+            <h4 class="sub-content">iii) Молекули</h4>
+            
+            <h3 class="sub-content">b) Видове</h3>
+            <div class="line"></div>
+            <h4 class="more-in">i) Прости</h4>
+            <h4 class="more-in">ii) Сложни</h4>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="toggle-btn" onclick="toggleContent('reactions')">2) Химични реакции</h2>
+        <div class="line"></div>
+        <div class="content" id="reactions">
+            <h3>a) Състав</h3>
+            <div class="line"></div>
+            <h4 class="sub-content">i) Продукти на реакцията</h4>
+            <h4 class="sub-content">ii) Изходни вещества</h4>
+            <h3>b) Условия</h3>
+            <h3>c) Признаци</h3>
+            <h3>d) Видове</h3>
+            <h4 class="sub-content">i) Хим. Разлагане</h4>
+            <h4 class="sub-content">ii) Хим. Съединяване</h4>
+            <h4 class="sub-content">iii) Хим. Разлагане</h4>
+            <h4 class="sub-content">iv) Горене</h4>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2024 CookieStocky. Всички права запазени.
+    <br>
+    <span>Този сайт все още е в тестов период, така че информацията може да не е напълно точна. Моля, тествайте сайта, а не информацията.</span>
+</footer>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+
+    // Initializing all content to be hidden
+    document.querySelectorAll('.content').forEach(item => {
+        item.style.display = "none";
+    });
+    
+    function fadeIn() {
+        document.body.style.opacity = "1"; // Fade in effect
+    }
+</script>
+
+</body>
+</html>
